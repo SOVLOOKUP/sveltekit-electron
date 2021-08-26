@@ -1,5 +1,4 @@
 {
-	"asar": false,
 	"productName": "Svelte Electron",
 	"appId": "com.example.app",
 	"compression": "maximum",
