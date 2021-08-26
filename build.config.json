@@ -1,11 +1,13 @@
 {
-	"appId": "com.example.app",
+	"asar": false,
 	"productName": "Svelte Electron",
+	"appId": "com.example.app",
+	"compression": "maximum",
 	"directories": {
 		"output": "dist"
 	},
 	"files": [
-		"src/electron.cjs",
+		"electron.cjs",
 		{
 			"from": "build",
 			"to": ""

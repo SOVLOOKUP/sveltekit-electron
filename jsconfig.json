@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "/~/*": ["src/*"]
-    }
-  },
-  "exclude": ["node_modules", "build", "dist"]
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"/~/*": ["/*"]
+		}
+	},
+	"exclude": ["node_modules", "build", "dist"]
 }

@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { getStore } from '$lib/utils/hmr-stores';
-
 	export let id: string;
 
-	const count = getStore(id, 0);
+	let count = 0;
 
 	const increment = () => {
-		$count += 1;
+		count += 1;
 	};
+
+	$: count;
 </script>
 
 <button {id} on:click={increment}>
-	Clicks: {$count}
+	Clicks: {count}
 </button>
 
 <style>
