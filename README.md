@@ -4,27 +4,7 @@
 
 # Sveltekit + Electron
 
-Minimal [Sveltekit](https://github.com/sveltejs/kit#readme) + [Electron](https://www.electronjs.org/) starter template.
+## todo
 
-<br />
-
-## Getting Started
-> *Feel free to substitute `npm` with `pnpm` or `yarn`.
-
-|         |                                             |
-| ------- | ------------------------------------------- |
-| Clone   | · `npx degit fractalhq/sveltekit-electron ` |
-| Install | · `npm install`                             |
-| Develop | · `npm run dev`                             |
-| Build   | · `npm run build`                           |
-
-
-<br />
-
-<p align="center">
-  <img src="screenshot.png" />
-</p>
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Svelte for VSCode](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+1. 看看是否能使用 ts 写 electron
+2. 所有 node 依赖集中在一个文件中管理，构建前解析并注入 static 文件夹
