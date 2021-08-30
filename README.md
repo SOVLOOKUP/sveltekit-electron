@@ -6,5 +6,5 @@
 
 ## todo
 
-1. 看看是否能使用 ts 写 electron
+1. 看看是否能使用 ts 写 electron 使用 tsup 编译一下
 2. 所有 node 依赖集中在一个文件中管理，构建前解析并注入 static 文件夹
