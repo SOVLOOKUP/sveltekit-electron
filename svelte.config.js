@@ -5,7 +5,11 @@ import adapter from '@sveltejs/adapter-static'
 const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			pages: "output/build",
+			assets: "output/build",
+			fallback: undefined
+		}),
 		target: '#svelte'
 	},
 }

@@ -3,41 +3,34 @@
 	"version": "0.0.1",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
-	"main": "electron.cjs",
+	"main": "src-electron/index.cjs",
 	"type": "module",
 	"scripts": {
 		"dev": "NODE_ENV=dev npm run dev:all",
 		"dev:all": "concurrently -n=svelte,electron -c='#ff3e00',blue \"npm run dev:svelte\" \"npm run dev:electron\"",
 		"dev:svelte": "svelte-kit dev",
-		"dev:electron": "electron electron.cjs",
-		"build": "cross-env NODE_ENV=production npm run build:svelte && npm run build:electron",
+		"dev:electron": "electron src-electron/index.cjs",
+		"build": "node scripts/build.js",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "electron-builder --config build.config.json",
+		"build:electron": "",
 		"start": "svelte-kit start"
 	},
 	"browserslist": [
 		"Chrome 89"
 	],
-	"dependencies": {
-		"electron-serve": "^1.1.0"
-	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
-		"@types/electron-window-state": "^2.0.34",
+		"@types/node": "^16.7.8",
 		"@typescript-eslint/eslint-plugin": "^4.29.3",
 		"@typescript-eslint/parser": "^4.29.3",
 		"concurrently": "^6.2.1",
 		"cross-env": "^7.0.3",
+		"diff-match-patch": "^1.0.5",
 		"dotenv": "^10.0.0",
-		"electron": "^13.2.2",
-		"electron-builder": "^22.11.7",
-		"electron-connect": "^0.6.3",
-		"electron-packager": "^15.3.0",
-		"electron-reloader": "^1.2.1",
-		"electron-updater": "^4.3.9",
 		"eslint": "^7.32.0",
 		"eslint-plugin-svelte": "^1.1.2",
+		"fs-extra": "^10.0.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.3.2",
 		"prettier-plugin-svelte": "^2.3.1",
@@ -45,6 +38,7 @@
 		"svelte": "^3.42.3",
 		"svelte-check": "^2.2.5",
 		"svelte-preprocess": "^4.8.0",
+		"tsup": "^4.14.0",
 		"typescript": "^4.3.5",
 		"vite": "^2.5.1"
 	}

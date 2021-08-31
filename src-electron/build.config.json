@@ -1,0 +1,15 @@
+{
+	"productName": "Svelte Electron",
+	"appId": "com.example.app",
+	"copyright": "Copyright (c) 2021 SOVLOOKUP",
+	"compression": "maximum",
+	"directories": {
+		"output": "dist"
+	},
+	"asar": false,
+	"buildVersion": "13.2.2",
+	"extraResources": {
+		"from": "build",
+		"to": ""
+	}
+}
