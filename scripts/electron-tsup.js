@@ -14,7 +14,8 @@ import fs from 'fs-extra'
         clean: true,
         entryPoints: [`${electronDirName}/src/**/*`],
         outDir: `${outputDir}/src`,
-        external: ["electron"]
+        external: ["electron"],
+        watch: process.env.NODE_ENV === 'development' ? true : false,
     })
 
     // clean output

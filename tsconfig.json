@@ -28,6 +28,7 @@
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/*.svelte",
-		"electron/index.ts"
+		"src-electron/src/**/*.js",
+		"src-electron/src/**/*.ts"
 	]
 }

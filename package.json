@@ -3,17 +3,18 @@
 	"version": "0.0.1",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
-	"main": "src-electron/index.cjs",
+	"main": "build/src/index.cjs",
 	"type": "module",
 	"scripts": {
 		"postinstall": "cd src-electron && pnpm i && cd ..",
-		"dev": "NODE_ENV=dev npm run dev:all",
-		"dev:all": "concurrently -n=svelte,electron -c='#ff3e00',blue \"npm run dev:svelte\" \"npm run dev:electron\"",
+		"dev": "node scripts/electron-tsup.js && NODE_ENV=development npm run dev:all",
+		"dev:all": "concurrently -n=tsup,svelte,electron -c=yellow,'#ff3e00',blue \"npm run electron-tsup\" \"npm run dev:svelte\" \"npm run dev:electron\"",
+		"electron-tsup": "node scripts/electron-tsup.js",
 		"dev:svelte": "svelte-kit dev",
-		"dev:electron": "electron src-electron/index.cjs",
-		"build": "cross-env NODE_ENV=production node scripts/build.js && npm run build:svelte && npm run build:electron",
+		"dev:electron": "cd build && node_modules/.bin/electron src/index.cjs",
+		"build": "cross-env NODE_ENV=production npm run electron-tsup && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "cd build && ./node_modules/electron-builder/cli.js --config build.config.json && cd .."
+		"build:electron": "cd build && src-electron/node_modules/.bin/electron-builder --config build.config.json && cd .."
 	},
 	"browserslist": [
 		"Chrome 89"
