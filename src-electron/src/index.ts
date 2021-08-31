@@ -28,7 +28,7 @@ function createWindow() {
 
 async function loadVite(port: string) {
 	try {
-		await mainWindow.loadURL(`http://localhost:${port}`);
+		await mainWindow?.loadURL(`http://localhost:${port}`);
 	} catch (error) {
 		console.log('Error loading URL, retrying', error);
 		setTimeout(() => {
