@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import serve from 'electron-serve';
 
-const serveURL = serve({ directory: '.' });
+const serveURL = serve({ directory: '../build' });
 const port = process.env.PORT || 3000;
 const dev = !app.isPackaged;
 
@@ -54,16 +54,28 @@ function createMainWindow() {
 		mainWindow = null;
 	});
 
-	if (dev) loadVite(port.toString());
-	else serveURL(mainWindow);
+	if (dev) {
+		loadVite(port.toString());
+	} else {
+		serveURL(mainWindow);
+	}
 }
 
-app.once('ready', createMainWindow);
-app.on('activate', () => {
-	if (!mainWindow) {
-		createMainWindow();
-	}
-});
-app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') app.quit();
-});
+(async () => {
+	await app.whenReady();
+
+	mainWindow = new BrowserWindow();
+
+	await serveURL(mainWindow);
+})();
+
+// app.once('ready', createMainWindow);
+// app.on('activate', () => {
+// 	if (!mainWindow) {
+// 		createMainWindow();
+// 	}
+// });
+
+// app.on('window-all-closed', () => {
+// 	if (process.platform !== 'darwin') app.quit();
+// });
