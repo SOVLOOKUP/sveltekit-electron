@@ -11,21 +11,6 @@ const baseWindowOptions: BrowserWindowConstructorOptions = {
 	backgroundColor: 'whitesmoke',
 	titleBarStyle: 'hidden',
 	autoHideMenuBar: true,
-	trafficLightPosition: {
-		x: 17,
-		y: 32,
-	},
-	minHeight: 450,
-	minWidth: 500,
-	webPreferences: {
-		enableRemoteModule: true,
-		contextIsolation: true,
-		nodeIntegration: true,
-		spellcheck: false,
-		devTools: dev,
-	},
-	width: 800,
-	height: 600,
 };
 
 function createWindow() {
@@ -41,13 +26,15 @@ function createWindow() {
 	return mainWindow;
 }
 
-function loadVite(port: string) {
-	mainWindow.loadURL(`http://localhost:${port}`).catch((e) => {
-		console.log('Error loading URL, retrying', e);
+async function loadVite(port: string) {
+	try {
+		await mainWindow.loadURL(`http://localhost:${port}`);
+	} catch (error) {
+		console.log('Error loading URL, retrying', error);
 		setTimeout(() => {
 			loadVite(port);
 		}, 1000);
-	});
+	}
 }
 
 async function createMainWindow() {
@@ -58,7 +45,7 @@ async function createMainWindow() {
 	});
 
 	if (dev) {
-		loadVite(port.toString());
+		await loadVite(port.toString());
 	} else {
 		await baseURL(mainWindow);
 	}
@@ -70,7 +57,11 @@ async function createMainWindow() {
 // 	}
 // });
 
-app.once('ready', createMainWindow);
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') app.quit();
 });
+
+(async () => {
+	await app.whenReady();
+	await createMainWindow();
+})();

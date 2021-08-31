@@ -14,17 +14,14 @@
 		"dev:electron": "cd build && node_modules/.bin/electron src/index.cjs",
 		"build": "cross-env NODE_ENV=production npm run electron-tsup && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "cd build && src-electron/node_modules/.bin/electron-builder --config build.config.json && cd .."
+		"build:electron": "cd build && node_modules/.bin/electron-builder --config build.config.json && cd .."
 	},
-	"browserslist": [
-		"Chrome 89"
-	],
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
-		"@types/node": "^16.7.8",
-		"@typescript-eslint/eslint-plugin": "^4.29.3",
-		"@typescript-eslint/parser": "^4.29.3",
+		"@types/node": "^16.7.9",
+		"@typescript-eslint/eslint-plugin": "^4.30.0",
+		"@typescript-eslint/parser": "^4.30.0",
 		"concurrently": "^6.2.1",
 		"cross-env": "^7.0.3",
 		"diff-match-patch": "^1.0.5",
@@ -34,13 +31,13 @@
 		"fs-extra": "^10.0.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.3.2",
-		"prettier-plugin-svelte": "^2.3.1",
-		"sass": "^1.38.1",
-		"svelte": "^3.42.3",
+		"prettier-plugin-svelte": "^2.4.0",
+		"sass": "^1.38.2",
+		"svelte": "^3.42.4",
 		"svelte-check": "^2.2.5",
 		"svelte-preprocess": "^4.8.0",
 		"tsup": "^4.14.0",
-		"typescript": "^4.3.5",
-		"vite": "^2.5.1"
+		"typescript": "^4.4.2",
+		"vite": "^2.5.2"
 	}
 }
