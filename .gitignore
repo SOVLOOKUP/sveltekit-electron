@@ -9,5 +9,4 @@ node_modules/
 *.local
 build/
 dist/
-output/
 .svelte-kit/

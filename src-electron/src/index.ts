@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import serve from 'electron-serve';
 
-const serveURL = serve({ directory: '../build' });
+const baseURL = serve({ directory: '../base' });
 const port = process.env.PORT || 3000;
 const dev = !app.isPackaged;
 
@@ -57,7 +57,7 @@ function createMainWindow() {
 	if (dev) {
 		loadVite(port.toString());
 	} else {
-		serveURL(mainWindow);
+		baseURL(mainWindow);
 	}
 }
 
@@ -66,7 +66,7 @@ function createMainWindow() {
 
 	mainWindow = new BrowserWindow();
 
-	await serveURL(mainWindow);
+	await baseURL(mainWindow);
 })();
 
 // app.once('ready', createMainWindow);

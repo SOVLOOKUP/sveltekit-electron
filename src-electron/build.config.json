@@ -4,12 +4,10 @@
 	"copyright": "Copyright (c) 2021 SOVLOOKUP",
 	"compression": "maximum",
 	"directories": {
-		"output": "dist"
+		"output": "../dist"
 	},
-	"asar": false,
-	"buildVersion": "13.2.2",
 	"extraResources": {
 		"from": "build",
-		"to": ""
+		"to": "base"
 	}
 }

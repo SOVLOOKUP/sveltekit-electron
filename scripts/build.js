@@ -1,10 +1,9 @@
 import tsup from 'tsup'
 import fs from 'fs-extra'
-import { execSync } from 'child_process'
 
 (async () => {
     const electronDirName = "src-electron"
-    const outputDir = "output"
+    const outputDir = "build"
     const tsupConfig = tsup.defineConfig({
         minify: true,
         minifyIdentifiers: true,
@@ -26,11 +25,4 @@ import { execSync } from 'child_process'
     // compile electron to cjs
     await fs.copy(electronDirName, outputDir)
     await tsup.build(tsupConfig)
-
-    execSync("cross-env NODE_ENV=production npm run build:svelte && npm run build:electron")
 })()
-
-
-
-
-// ./ node_modules / tsup / dist / cli - node.js./ src - electron / src/**/ * --format=cjs--minify--minify - whitespace--minify - identifiers--minify - syntax--target = esnext--clean - d./ src - electron / output

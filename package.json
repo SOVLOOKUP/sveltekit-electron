@@ -6,14 +6,14 @@
 	"main": "src-electron/index.cjs",
 	"type": "module",
 	"scripts": {
+		"postinstall": "cd src-electron && pnpm i && cd ..",
 		"dev": "NODE_ENV=dev npm run dev:all",
 		"dev:all": "concurrently -n=svelte,electron -c='#ff3e00',blue \"npm run dev:svelte\" \"npm run dev:electron\"",
 		"dev:svelte": "svelte-kit dev",
 		"dev:electron": "electron src-electron/index.cjs",
-		"build": "node scripts/build.js",
+		"build": "cross-env NODE_ENV=production node scripts/build.js && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "",
-		"start": "svelte-kit start"
+		"build:electron": "cd build && ./node_modules/electron-builder/cli.js --config build.config.json && cd .."
 	},
 	"browserslist": [
 		"Chrome 89"
