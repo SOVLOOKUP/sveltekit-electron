@@ -7,7 +7,7 @@
 	"main": "build/src/index.cjs",
 	"type": "module",
 	"scripts": {
-		"postinstall": "node_modules/.bin/gitmoji -i",
+		"postinstall": "npx gitmoji -i",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
 		"commit": "git add . && git commit",
