@@ -48,6 +48,9 @@
 		"vite": "^2.5.2"
 	},
 	"release-it": {
+		"npm": {
+			"publish": false
+		},
 		"plugins": {
 			"@release-it/bumper": {
 				"in": "package.json",

@@ -10,7 +10,7 @@
 4. push 前代码自动格式化
 5. 自动化的开发日志
 6. 自动同步 package.json 的版本
-7. 自动 github tag/release
+7. 自动 git 管理
 
 ## Quick Start
 
