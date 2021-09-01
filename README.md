@@ -8,8 +8,24 @@
 2. 双 package.json 不引入开发依赖
 3. eslint 代码自动检查
 4. push 前代码自动格式化
+5. 自动化的开发日志
+6. 自动同步 package.json 的版本
+7. 自动 github tag/release
+
+## Quick Start
+
+#### prepare
+
+`pnpm i`
+
+#### dev
+
+`pnpm dev`
+
+#### release
+
+`pnpm release`
 
 ## todo
 
-2. action 自动发布
-3. 配上 hoosky 代码格式化、release-it 自动化
+1. action 自动发布
