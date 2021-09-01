@@ -10,6 +10,7 @@
 		"postinstall": "cd src-electron && pnpm i && cd ..",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
+		"commit": "git add . && git commit",
 		"dev": "npm run electron-tsup && NODE_ENV=development npm run dev:all",
 		"dev:all": "concurrently -n=tsup,svelte,electron -c=yellow,'#ff3e00',blue \"npm run electron-tsup\" \"npm run dev:svelte\" \"npm run dev:electron\"",
 		"electron-tsup": "node scripts/electron-tsup.js",
