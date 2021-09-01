@@ -38,4 +38,4 @@
 
 ## todo
 
-1. action 自动发布
+1. action 自动发
