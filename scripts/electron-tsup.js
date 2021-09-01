@@ -1,7 +1,6 @@
 import tsup from 'tsup'
 import fs from 'fs-extra'
 import dotenv from 'dotenv'
-
 ;(async () => {
 	dotenv.config()
 	const electronDirName = process.env.ELECTRON_DIR_NAME
