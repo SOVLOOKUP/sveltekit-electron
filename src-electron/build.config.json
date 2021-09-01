@@ -8,5 +8,8 @@
 	"extraResources": {
 		"from": "build",
 		"to": "base"
+	},
+	"linux": {
+		"publish": ["github"]
 	}
 }
