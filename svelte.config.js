@@ -1,7 +1,7 @@
 import sveltePreprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-static'
 
-const outputDir = "build"
+const outputDir = 'build'
 
 /** @type {import("@sveltejs/kit").Config} */
 const config = {
@@ -10,9 +10,9 @@ const config = {
 		adapter: adapter({
 			pages: `${outputDir}/build`,
 			assets: `${outputDir}/build`,
-			fallback: undefined
+			fallback: undefined,
 		}),
-		target: '#svelte'
+		target: '#svelte',
 	},
 }
 

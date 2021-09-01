@@ -7,6 +7,7 @@
 	"type": "module",
 	"scripts": {
 		"postinstall": "cd src-electron && pnpm i && cd ..",
+		"release": "release-it",
 		"dev": "node scripts/electron-tsup.js && NODE_ENV=development npm run dev:all",
 		"dev:all": "concurrently -n=tsup,svelte,electron -c=yellow,'#ff3e00',blue \"npm run electron-tsup\" \"npm run dev:svelte\" \"npm run dev:electron\"",
 		"electron-tsup": "node scripts/electron-tsup.js",
@@ -32,6 +33,7 @@
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.3.2",
 		"prettier-plugin-svelte": "^2.4.0",
+		"release-it": "^14.11.5",
 		"sass": "^1.38.2",
 		"svelte": "^3.42.4",
 		"svelte-check": "^2.2.5",
@@ -39,5 +41,9 @@
 		"tsup": "^4.14.0",
 		"typescript": "^4.4.2",
 		"vite": "^2.5.2"
+	},
+	"hooks": {
+		"before:git:release": "node_modules/.bin/prettier --write --plugin-search-dir=. .",
+		"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 	}
 }

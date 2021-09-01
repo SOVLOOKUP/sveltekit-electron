@@ -9,6 +9,5 @@
 
 ## todo
 
-1. 打包改为存储
 2. action 自动发布
 3. 配上 hoosky 代码格式化、release-it 自动化

@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount } from 'svelte'
 
-	let ready: boolean = false;
-	onMount(() => (ready = true));
-
+	let ready: boolean = false
+	onMount(() => (ready = true))
 </script>
 
 <div class="dragbar" />
@@ -20,5 +19,4 @@
 		height: 40px;
 		width: 100%;
 	}
-
 </style>

@@ -1,13 +1,13 @@
 <script lang="ts">
-	export let id: string;
+	export let id: string
 
-	let count = 0;
+	let count = 0
 
 	const increment = () => {
-		count += 1;
-	};
+		count += 1
+	}
 
-	$: count;
+	$: count
 </script>
 
 <button {id} on:click={increment}>
