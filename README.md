@@ -22,6 +22,10 @@
 
 `pnpm dev`
 
+#### commit
+
+`pnpm commit`
+
 #### release
 
 **prerelease**
