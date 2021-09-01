@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.1-2",
+	"version": "0.0.1",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
@@ -67,7 +67,6 @@
 		},
 		"hooks": {
 			"before:init": "node_modules/.bin/svelte-check --tsconfig ./tsconfig.json",
-			"after:bump": "npm run build",
 			"before:git:release": "node_modules/.bin/prettier --write --plugin-search-dir=. .",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
