@@ -18,7 +18,7 @@
 		"dev:electron": "cd build && node_modules/.bin/electron src/index.cjs",
 		"build": "cross-env NODE_ENV=production npm run electron-tsup && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "cd build && node_modules/.bin/electron-builder --config build.config.json  --publish always && cd ..",
+		"build:electron": "cd build && node_modules/.bin/electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
 		"lint": "node_modules/.bin/svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
