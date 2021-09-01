@@ -16,7 +16,7 @@
 
 #### prepare
 
-`pnpm i`
+`pnpm i -r`
 
 #### dev
 

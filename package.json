@@ -7,7 +7,7 @@
 	"main": "build/src/index.cjs",
 	"type": "module",
 	"scripts": {
-		"postinstall": "cd src-electron && pnpm i && cd .. && node_modules/.bin/gitmoji -i",
+		"postinstall": "node_modules/.bin/gitmoji -i",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
 		"commit": "git add . && git commit",
