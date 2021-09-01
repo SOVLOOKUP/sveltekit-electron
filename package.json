@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
@@ -48,7 +48,7 @@
 		"plugins": {
 			"@release-it/bumper": {
 				"in": "package.json",
-				"out": "composer.json"
+				"out": "src-electron/package.json"
 			}
 		}
 	},
