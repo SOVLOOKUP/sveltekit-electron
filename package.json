@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.2-1",
+	"version": "0.0.1-0",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
@@ -20,6 +20,7 @@
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
+		"@release-it/conventional-changelog": "^3.3.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
 		"@types/node": "^16.7.9",
@@ -46,12 +47,14 @@
 	},
 	"release-it": {
 		"plugins": {
-			"@release-it/bumper": [
-				{
-					"in": "package.json",
-					"out": "src-electron/package.json"
-				}
-			]
+			"@release-it/bumper": {
+				"in": "package.json",
+				"out": "src-electron/package.json"
+			},
+			"@release-it/conventional-changelog": {
+				"preset": "eslint",
+				"infile": "CHANGELOG.md"
+			}
 		}
 	},
 	"hooks": {
