@@ -3,7 +3,7 @@ name: Release
 on:
     push:
         tags:
-          - "*"
+            - '*'
 
 jobs:
     release:
@@ -20,7 +20,7 @@ jobs:
             - name: Install Node.js, PNPM
               uses: pnpm/action-setup@v2.0.1
               with:
-                  node-version: 16
+                  version: 16
 
             - name: Install dependencies
               run: pnpm i
