@@ -6,6 +6,8 @@
 
 1. 完美的开发和发布体验
 2. 双 package.json 不引入开发依赖
+3. eslint 代码自动检查
+4. push 前代码自动格式化
 
 ## todo
 

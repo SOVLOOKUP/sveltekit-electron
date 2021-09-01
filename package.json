@@ -62,7 +62,7 @@
 			"before:init": "node_modules/.bin/svelte-check --tsconfig ./tsconfig.json",
 			"after:bump": "npm run build",
 			"before:git:release": "node_modules/.bin/prettier --write --plugin-search-dir=. .",
-			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+			"after:release": "Successfully released ${name} v${version} to ${repo.repository}."
 		}
 	}
 }
