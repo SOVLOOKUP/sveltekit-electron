@@ -24,6 +24,12 @@
 
 #### release
 
+**prerelease**
+
+`pnpm prerelease`
+
+**release**
+
 `pnpm release`
 
 ## todo
