@@ -6,3 +6,4 @@ dist/**
 pnpm-lock.yaml
 CHANGELOG.md
 .github/**/*
+.vscode/**/*
