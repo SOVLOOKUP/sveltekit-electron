@@ -19,7 +19,8 @@
 		"build": "cross-env NODE_ENV=production npm run electron-tsup && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
 		"build:electron": "cd build && pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
-		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json"
+		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json",
+		"format": "pnpx prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
@@ -66,8 +67,8 @@
 			}
 		},
 		"hooks": {
-			"before:init": "pnpx svelte-check --tsconfig ./tsconfig.json",
-			"before:git:release": "pnpx prettier --write --plugin-search-dir=. .",
+			"before:init": "pnpm lint",
+			"before:git:release": "pnpm format",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
 	}
