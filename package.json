@@ -20,7 +20,7 @@
 		"build:electron": "cd build && pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
 		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json",
 		"format": "pnpx prettier --write --plugin-search-dir=. .",
-		"changelog": "pnpx gitmoji-changelog"
+		"changelog": "pnpx gitmoji-changelog --group-similar-commits"
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
