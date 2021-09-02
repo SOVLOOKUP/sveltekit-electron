@@ -70,6 +70,9 @@ app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') app.quit()
 })
 ;(async () => {
+	// sandbox mode
+	app.enableSandbox()
+
 	await app.whenReady()
 	await createMainWindow()
 })()
