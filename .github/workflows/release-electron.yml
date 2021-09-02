@@ -30,6 +30,15 @@ jobs:
                   version: 6.0.2
                   run_install: true
 
+            - name: Add change log
+              uses: taiki-e/create-gh-release-action@v1
+              with:
+                  changelog: CHANGELOG.md
+                  title: $version
+                  draft: true
+                  env:
+                      GITHUB_TOKEN: ${{ secrets.github_token }}
+
             - name: Build/release Electron app
               run: pnpm build
               env:
