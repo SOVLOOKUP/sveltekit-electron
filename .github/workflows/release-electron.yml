@@ -1,9 +1,6 @@
 name: Release
 
-on:
-    push:
-        tags:
-            - '*'
+on: push
 
 jobs:
     release:
@@ -36,8 +33,8 @@ jobs:
                   changelog: CHANGELOG.md
                   title: $version
                   draft: true
-                  env:
-                      GITHUB_TOKEN: ${{ secrets.github_token }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.github_token }}
 
             - name: Build/release Electron app
               run: pnpm build
