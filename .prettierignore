@@ -5,5 +5,4 @@ node_modules/**
 dist/**
 pnpm-lock.yaml
 CHANGELOG.md
-.github/**/*
 .vscode/**/*
