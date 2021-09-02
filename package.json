@@ -61,7 +61,7 @@
 				"out": "src-electron/package.json"
 			},
 			"@release-it/conventional-changelog": {
-				"preset": "eslint",
+				"preset": "conventionalcommits",
 				"infile": "CHANGELOG.md"
 			}
 		},
