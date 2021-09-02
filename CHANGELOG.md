@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="1.1.1"></a>
+## 1.1.1 (2021-09-02)
+
+### Security
+
+- 🔒 add sandbox mode [[a215b7a](https://github.com/SOVLOOKUP/sveltekit-electron/commit/a215b7a918506febd9bce23c1d679f94deb39b35)]
+
+### Miscellaneous
+
+-  s [[03cfb87](https://github.com/SOVLOOKUP/sveltekit-electron/commit/03cfb872790c955e7337e5076f1411405a649b1b)]
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2021-09-02)
 
