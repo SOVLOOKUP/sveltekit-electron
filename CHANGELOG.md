@@ -1,11 +1,15 @@
 # Changelog
 
-<a name="next"></a>
-## next
+<a name="0.0.12"></a>
+## 0.0.12 (2021-09-02)
 
 ### Changed
 
 - ⬆️ update dependencies [[93b83e5](https://github.com/SOVLOOKUP/sveltekit-electron/commit/93b83e5aca654c2dc9061a835e6e85c2b1dac9f0)]
+
+### Miscellaneous
+
+- 🔨 update dev scripts use gitmoji-changelog [[8d1cb8a](https://github.com/SOVLOOKUP/sveltekit-electron/commit/8d1cb8a4af089d84cddd6f9f0b20881b8ebe4a8d)]
 
 
 <a name="0.0.11"></a>
