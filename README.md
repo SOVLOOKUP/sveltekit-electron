@@ -11,6 +11,7 @@
 5. 自动化的开发日志
 6. 自动同步 package.json 的版本
 7. 自动 git 管理
+8. 自动 release
 
 ## Quick Start
 
@@ -35,7 +36,3 @@
 **release**
 
 `pnpm release`
-
-## todo
-
-1. action 自动
