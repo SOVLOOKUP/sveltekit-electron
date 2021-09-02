@@ -59,17 +59,17 @@ jobs:
             - name: Cache pnpm modules
               uses: actions/cache@v2
               with:
-                path: ~/.pnpm-store
-                key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-                restore-keys: |
-                    ${{ runner.os }}-
+                  path: ~/.pnpm-store
+                  key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-
 
             - uses: pnpm/action-setup@v2.0.1
               with:
-                version: 6.14.5
-                run_install: true
+                  version: 6.14.5
+                  run_install: true
 
             - name: Build/release Electron app
               run: pnpm build
               env:
-                GH_TOKEN: ${{ secrets.github_token }}
+                  GH_TOKEN: ${{ secrets.github_token }}
