@@ -36,7 +36,7 @@ jobs:
                   GH_TOKEN: ${{ secrets.github_token }}
 
             - name: Add change log
-              if: matrix.platform == 'ubuntu-latest'
+              if: matrix.os == 'ubuntu-latest'
               uses: taiki-e/create-gh-release-action@v1
               with:
                   changelog: CHANGELOG.md
