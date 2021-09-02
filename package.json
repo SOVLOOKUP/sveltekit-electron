@@ -19,11 +19,11 @@
 		"build:svelte": "svelte-kit build",
 		"build:electron": "cd build && pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
 		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json",
-		"format": "pnpx prettier --write --plugin-search-dir=. ."
+		"format": "pnpx prettier --write --plugin-search-dir=. .",
+		"changelog": "pnpx gitmoji-changelog"
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
-		"@release-it/conventional-changelog": "^3.3.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
 		"@types/node": "^16.7.10",
@@ -37,6 +37,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte": "^1.1.2",
 		"fs-extra": "^10.0.0",
+		"gitmoji-changelog": "^2.2.1",
 		"gitmoji-cli": "^4.5.1",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.3.2",
@@ -59,14 +60,11 @@
 			"@release-it/bumper": {
 				"in": "package.json",
 				"out": "src-electron/package.json"
-			},
-			"@release-it/conventional-changelog": {
-				"preset": "conventionalcommits",
-				"infile": "CHANGELOG.md"
 			}
 		},
 		"hooks": {
 			"before:init": "pnpm lint",
+			"after:bump": "pnpm changelog",
 			"before:git:release": "pnpm format",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
