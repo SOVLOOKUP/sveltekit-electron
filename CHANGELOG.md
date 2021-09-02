@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="0.0.14"></a>
+## 0.0.14 (2021-09-02)
+
+### Fixed
+
+- 💚 fix changelog bug [[3dc4de4](https://github.com/SOVLOOKUP/sveltekit-electron/commit/3dc4de41cfc1a5d1c1e2ad05b74b204fcd858683)]
+
+
 <a name="0.0.13"></a>
 ## 0.0.13 (2021-09-02)
 
