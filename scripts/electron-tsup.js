@@ -31,7 +31,7 @@ import dotenv from 'dotenv'
 		if (fs.existsSync('.git')) {
 			await fs.copy('.git', `${outputDir}/.git`)
 		} else {
-			console.log("Please use git init before release!")
+			console.warn("Please use git init before release!")
 		}
 
 		await tsup.build(tsupConfig)
