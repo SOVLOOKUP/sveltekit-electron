@@ -16,7 +16,7 @@
 		"dev:all": "concurrently -n=tsup,svelte,electron -c=yellow,'#ff3e00',blue \"pnpm electron-tsup\" \"pnpm dev:svelte\" \"pnpm dev:electron\"",
 		"electron-tsup": "node scripts/electron-tsup.js",
 		"dev:svelte": "svelte-kit dev",
-		"dev:electron": "build/node_modules/.bin/electron build/src/index.cjs",
+		"dev:electron": "cd build && pnpx electronmon .",
 		"build": "cross-env NODE_ENV=production pnpm electron-tsup && pnpm build:svelte && pnpm build:electron",
 		"build:svelte": "svelte-kit build",
 		"build:electron": "cd build && pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",

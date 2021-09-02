@@ -4,15 +4,18 @@
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
 	"main": "src/index.cjs",
+	"scripts": {
+		"dev": "cd .. && pnpm dev"
+	},
 	"dependencies": {
-		"electron-serve": "^1.1.0"
+		"electron-dl": "^3.2.1",
+		"electron-serve": "^1.1.0",
+		"electron-util": "^0.17.2"
 	},
 	"devDependencies": {
 		"electron": "^14.0.0",
 		"electron-builder": "^22.11.7",
-		"electron-connect": "^0.6.3",
-		"electron-packager": "^15.3.0",
-		"electron-reloader": "^1.2.1",
-		"electron-updater": "^4.3.9"
+		"electron-better-ipc": "^2.0.1",
+		"electronmon": "^2.0.2"
 	}
 }

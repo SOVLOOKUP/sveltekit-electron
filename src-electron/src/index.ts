@@ -1,9 +1,10 @@
 import { app, BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
 import serve from 'electron-serve'
 
+const dev = !app.isPackaged
+
 const baseURL = serve({ directory: '../base' })
 const port = process.env.PORT || 3000
-const dev = !app.isPackaged
 
 let mainWindow: BrowserWindow | null
 
@@ -52,7 +53,7 @@ async function createMainWindow() {
 	})
 
 	if (dev) {
-		mainWindow.webContents.openDevTools()
+		mainWindow.webContents.openDevTools({ mode: 'detach' })
 		await loadVite(mainWindow, port.toString())
 	} else {
 		await baseURL(mainWindow)
