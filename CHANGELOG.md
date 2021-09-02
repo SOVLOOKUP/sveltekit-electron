@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="0.0.16"></a>
+## 0.0.16 (2021-09-02)
+
+### Fixed
+
+- 💚 fix ci bug [[3985773](https://github.com/SOVLOOKUP/sveltekit-electron/commit/3985773522e93f66e9179f5c6bb00b900b83a914)]
+    * 💚 fix ci bug ([5a67bca](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5a67bcace5442cf449e86dce4bcee4d549b8d674))
+
+### Miscellaneous
+
+- 🙈 prettier vscode [[be038ed](https://github.com/SOVLOOKUP/sveltekit-electron/commit/be038eda4470ff945226f6ceef1effe4037dd244)]
+
+
 <a name="0.0.15"></a>
 ## 0.0.15 (2021-09-02)
 
