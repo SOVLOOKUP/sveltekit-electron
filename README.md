@@ -35,7 +35,3 @@
 **release**
 
 `pnpm release`
-
-## todo
-
-1. action 自动
