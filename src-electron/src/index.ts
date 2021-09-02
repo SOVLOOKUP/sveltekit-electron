@@ -1,5 +1,6 @@
 import { app, BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
 import serve from 'electron-serve'
+import fetch from 'cross-fetch'
 
 const baseURL = serve({ directory: '../base' })
 const port = process.env.PORT || 3000
@@ -26,15 +27,22 @@ function createWindow() {
 	return mainWindow
 }
 
-async function loadVite(port: string) {
-	try {
-		await mainWindow?.loadURL(`http://localhost:${port}`)
-	} catch (error) {
-		console.log('Error loading URL, retrying')
-		setTimeout(() => {
-			loadVite(port)
-		}, 1000)
+async function loadVite(window: BrowserWindow, port: string) {
+	const devURL = `http://localhost:${port}`
+	const wait = (ms: number) => new Promise<void>((resolve) => setTimeout(() => resolve(), ms))
+
+	const loadURL = async () => {
+		try {
+			await window.loadURL(devURL)
+			console.log('Reached devURL')
+		} catch (error) {
+			console.log('URL cannot be reached , Retrying')
+			await wait(1000)
+			await loadURL()
+		}
 	}
+
+	await loadURL()
 }
 
 async function createMainWindow() {
@@ -45,7 +53,8 @@ async function createMainWindow() {
 	})
 
 	if (dev) {
-		await loadVite(port.toString())
+		mainWindow.webContents.openDevTools()
+		await loadVite(mainWindow, port.toString())
 	} else {
 		await baseURL(mainWindow)
 	}
