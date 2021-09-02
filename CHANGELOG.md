@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.0"></a>
+## 1.0.0 (2021-09-02)
+
+### Changed
+
+- 🎨 format github action [[5667e7d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5667e7d902be21dd98fd0e9599b25eea6baea257)]
+
+
 <a name="0.0.16"></a>
 ## 0.0.16 (2021-09-02)
 
