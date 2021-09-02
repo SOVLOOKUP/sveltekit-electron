@@ -36,3 +36,5 @@
 **release**
 
 `pnpm release`
+
+or `pnpm ok` = `pnpm commit && pnpm release`
