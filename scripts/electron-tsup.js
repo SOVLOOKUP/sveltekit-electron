@@ -19,9 +19,9 @@ import dotenv from 'dotenv'
 			watch: process.env.NODE_ENV === 'production' ? false : true,
 		})
 		// clean output
-		if (fs.existsSync(outputDir)) {
-			fs.rmSync(outputDir, { recursive: true })
-		}
+		// if (fs.existsSync(outputDir)) {
+		// 	fs.rmSync(outputDir, { recursive: true })
+		// }
 
 		// compile electron to cjs
 		await fs.copy(electronDirName, outputDir)
