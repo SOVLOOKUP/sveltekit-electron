@@ -7,6 +7,7 @@
 	"main": "build/src/index.cjs",
 	"type": "module",
 	"scripts": {
+		"bootstrap": "pnpm i -r",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
 		"commit": "git add . && pnpx gitmoji -c",

@@ -20,7 +20,7 @@ You need install [`pnpm`](https://github.com/pnpm/pnpm) first:
 | Action           | Command                                      |
 | ---------------- | -------------------------------------------- |
 | Clone            | · `pnpx degit SOVLOOKUP/sveltekit-electron ` |
-| Install          | · `pnpm i -r`                                |
+| Install          | · `pnpm bootstrap`                           |
 | Develop          | · `pnpm dev`                                 |
 | Build            | · `pnpm build`                               |
 | Commit + Release | · `pnpm ok`                                  |
