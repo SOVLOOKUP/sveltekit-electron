@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="0.0.13"></a>
+## 0.0.13 (2021-09-02)
+
+### Miscellaneous
+
+- 🚀 delpoy fix [[0639422](https://github.com/SOVLOOKUP/sveltekit-electron/commit/0639422d7cf54fbb35f2f490a8bbea6592903285)]
+- 🔨 group similar commits [[d932b5d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/d932b5da819338b3ab86c3f6d86db65cf9d82fad)]
+
+
 <a name="0.0.12"></a>
 ## 0.0.12 (2021-09-02)
 
