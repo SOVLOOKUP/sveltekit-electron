@@ -7,7 +7,7 @@
 	"main": "build/src/index.cjs",
 	"type": "module",
 	"scripts": {
-		"postinstall": "npx gitmoji -i",
+		"postinstall": "pnpx gitmoji -i",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
 		"commit": "git add . && git commit",
@@ -15,11 +15,11 @@
 		"dev:all": "concurrently -n=tsup,svelte,electron -c=yellow,'#ff3e00',blue \"npm run electron-tsup\" \"npm run dev:svelte\" \"npm run dev:electron\"",
 		"electron-tsup": "node scripts/electron-tsup.js",
 		"dev:svelte": "svelte-kit dev",
-		"dev:electron": "cd build && node_modules/.bin/electron src/index.cjs",
+		"dev:electron": "cd build && pnpx electron src/index.cjs",
 		"build": "cross-env NODE_ENV=production npm run electron-tsup && npm run build:svelte && npm run build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "cd build && node_modules/.bin/electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
-		"lint": "node_modules/.bin/svelte-check --tsconfig ./tsconfig.json"
+		"build:electron": "cd build && pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github && cd ..",
+		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
@@ -66,8 +66,8 @@
 			}
 		},
 		"hooks": {
-			"before:init": "node_modules/.bin/svelte-check --tsconfig ./tsconfig.json",
-			"before:git:release": "node_modules/.bin/prettier --write --plugin-search-dir=. .",
+			"before:init": "pnpx svelte-check --tsconfig ./tsconfig.json",
+			"before:git:release": "pnpx prettier --write --plugin-search-dir=. .",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
 	}
