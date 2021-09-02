@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="1.0.1"></a>
+## 1.0.1 (2021-09-02)
+
+### Changed
+
+- 🚸 pnpm [[74ca19b](https://github.com/SOVLOOKUP/sveltekit-electron/commit/74ca19ba1adbfffc6f68f443040c0243b89bc23a)]
+- 🚸 bootstrap [[37aa330](https://github.com/SOVLOOKUP/sveltekit-electron/commit/37aa330cfe1f2c0babd9cce4b5c0fe7dd660c008)]
+- 🎨 format [[5577ecb](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5577ecbf2ee99f3f3320f5665e791af28a6fb6a0)]
+
+### Removed
+
+- ➖  [[525c8d9](https://github.com/SOVLOOKUP/sveltekit-electron/commit/525c8d98cc4d2e5fe1e8fab4d2b5a290bd617b3d)]
+
+### Fixed
+
+- 🐛 fix file move bug [[e031140](https://github.com/SOVLOOKUP/sveltekit-electron/commit/e031140dfdfa9bed56fe4503d8806be5e6f1a8c3)]
+- 🐛 clean build bug [[f0d3a43](https://github.com/SOVLOOKUP/sveltekit-electron/commit/f0d3a433a8cb0da88ad5e4205d0970722e4fef1a)]
+- 🐛 electron bug [[5671f4c](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5671f4c4da472cd173025b7cd1cac24741ea3711)]
+- 🐛 fix dev load bug [[f6737f7](https://github.com/SOVLOOKUP/sveltekit-electron/commit/f6737f74b758486405ac35b06e9ce03f0a807abd)]
+- 🐛 fix dev bug [[6689449](https://github.com/SOVLOOKUP/sveltekit-electron/commit/6689449c407b1eb1179af5d6f499ce97aa165c65)]
+- 🐛 no git repo bug [[e9043e7](https://github.com/SOVLOOKUP/sveltekit-electron/commit/e9043e7edf42ee79a3a35c346e5981c3b88a43f4)]
+
+### Miscellaneous
+
+- 📝 git before release [[05ff0b4](https://github.com/SOVLOOKUP/sveltekit-electron/commit/05ff0b4d7fad2aa3b1f517ab6f2d918c307b469b)]
+-  git pushMerge branch &#x27;master&#x27; of github.com:SOVLOOKUP/sveltekit-electron [[caa493c](https://github.com/SOVLOOKUP/sveltekit-electron/commit/caa493cf1b83d21244e7e935727a8d61e772c404)]
+-  Update README.md [[2d341fc](https://github.com/SOVLOOKUP/sveltekit-electron/commit/2d341fc30aade424f03f6c0053ccecc4bfb83c5b)]
+
+
 <a name="1.0.0"></a>
 ## 1.0.0 (2021-09-02)
 
