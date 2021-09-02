@@ -16,7 +16,7 @@ import dotenv from 'dotenv'
 			entryPoints: [`${electronDirName}/src/**/*`],
 			outDir: `${outputDir}/src`,
 			external: ['electron'],
-			watch: process.env.NODE_ENV === 'development' ? true : false,
+			watch: process.env.NODE_ENV === 'production' ? false : true,
 		})
 		// clean output
 		if (fs.existsSync(outputDir)) {
