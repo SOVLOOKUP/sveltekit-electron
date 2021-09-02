@@ -5,7 +5,6 @@
 	"author": "sovlookup",
 	"main": "src/index.cjs",
 	"dependencies": {
-		"cross-fetch": "^3.1.4",
 		"electron-serve": "^1.1.0"
 	},
 	"devDependencies": {

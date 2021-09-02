@@ -1,6 +1,5 @@
 import { app, BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
 import serve from 'electron-serve'
-import fetch from 'cross-fetch'
 
 const baseURL = serve({ directory: '../base' })
 const port = process.env.PORT || 3000
