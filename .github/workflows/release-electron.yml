@@ -6,13 +6,13 @@ on:
             - '*'
 
 jobs:
-    release:
+    linux:
         runs-on: ${{ matrix.os }}
 
         strategy:
             fail-fast: false
             matrix:
-                os: [macos-latest, ubuntu-latest, windows-latest]
+                os: [ubuntu-latest]
 
         steps:
             - uses: actions/checkout@v2
@@ -30,11 +30,6 @@ jobs:
                   version: 6.0.2
                   run_install: true
 
-            - name: Build/release Electron app
-              run: pnpm build
-              env:
-                  GH_TOKEN: ${{ secrets.github_token }}
-
             - name: Add change log
               if: matrix.os == 'ubuntu-latest'
               uses: taiki-e/create-gh-release-action@v1
@@ -44,3 +39,37 @@ jobs:
                   draft: true
               env:
                   GITHUB_TOKEN: ${{ secrets.github_token }}
+
+            - name: Build/release Electron app
+              run: pnpm build
+              env:
+                  GH_TOKEN: ${{ secrets.github_token }}
+
+    else:
+        runs-on: ${{ matrix.os }}
+        needs: linux
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [macos-latest, windows-latest]
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Cache pnpm modules
+            uses: actions/cache@v2
+            with:
+                path: ~/.pnpm-store
+                key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+                restore-keys: |
+                    ${{ runner.os }}-
+
+            - uses: pnpm/action-setup@v2.0.1
+            with:
+                version: 6.0.2
+                run_install: true
+
+            - name: Build/release Electron app
+            run: pnpm build
+            env:
+                GH_TOKEN: ${{ secrets.github_token }}
