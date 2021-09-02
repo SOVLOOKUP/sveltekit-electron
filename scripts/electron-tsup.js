@@ -24,7 +24,9 @@ import dotenv from 'dotenv'
 		// }
 
 		// compile electron to cjs
-		await fs.copy(electronDirName, outputDir)
+		if (!fs.existsSync(outputDir)) {
+			await fs.copy(electronDirName, outputDir)
+		}
 
 		if (fs.existsSync('.git')) {
 			await fs.copy('.git', `${outputDir}/.git`)
