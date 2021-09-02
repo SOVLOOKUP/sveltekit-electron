@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",

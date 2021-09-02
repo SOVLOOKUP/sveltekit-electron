@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="0.0.15"></a>
+## 0.0.15 (2021-09-02)
+
+### Fixed
+
+- 💚 fix changelog gen bug [[617d9eb](https://github.com/SOVLOOKUP/sveltekit-electron/commit/617d9eb1d58f42073dcb2194430d393aa85ec078)]
+
+### Miscellaneous
+
+- 🔨 prettier script update [[0152693](https://github.com/SOVLOOKUP/sveltekit-electron/commit/0152693b75b49a1a1685c054b0a47f7ee445b37a)]
+- 🔨 pnpm ok [[fa9234a](https://github.com/SOVLOOKUP/sveltekit-electron/commit/fa9234a61d0c711f5f7c8aed988068fc9290a2f8)]
+
+
 <a name="0.0.14"></a>
 ## 0.0.14 (2021-09-02)
 
