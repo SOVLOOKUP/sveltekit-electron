@@ -19,7 +19,7 @@ You need install [`pnpm`](https://github.com/pnpm/pnpm) first:
 
 | Action           | Command                                      |
 | ---------------- | -------------------------------------------- |
-| Clone            | · `pnpx degit fractalhq/sveltekit-electron ` |
+| Clone            | · `pnpx degit SOVLOOKUP/sveltekit-electron ` |
 | Install          | · `pnpm i -r`                                |
 | Develop          | · `pnpm dev`                                 |
 | Build            | · `pnpm build`                               |
