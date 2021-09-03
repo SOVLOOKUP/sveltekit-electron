@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.2.0"></a>
+## 1.2.0 (2021-09-03)
+
+### Added
+
+- ✨ auto update [[f960005](https://github.com/SOVLOOKUP/sveltekit-electron/commit/f96000599baab72c107bd3b99bdcec5916b69a68)]
+
+### Changed
+
+- 🎨 improve double pkg [[76ae671](https://github.com/SOVLOOKUP/sveltekit-electron/commit/76ae6712969d308ec29d0beceec178d672c27d17)]
+
+### Miscellaneous
+
+- 📝 update readme [[8445c5d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/8445c5d1847f42c5380f55a53b1e6a59d489fd75)]
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2021-09-02)
 
