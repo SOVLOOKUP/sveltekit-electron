@@ -3,7 +3,7 @@
 	"appId": "com.example.app",
 	"copyright": "Copyright (c) 2021 SOVLOOKUP",
 	"directories": {
-		"output": "../dist"
+		"output": "dist"
 	},
 	"extraResources": {
 		"from": "build",

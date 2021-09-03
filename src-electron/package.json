@@ -10,12 +10,7 @@
 	"dependencies": {
 		"electron-dl": "^3.2.1",
 		"electron-serve": "^1.1.0",
-		"electron-util": "^0.17.2"
-	},
-	"devDependencies": {
-		"electron": "^14.0.0",
-		"electron-builder": "^22.11.7",
-		"electron-better-ipc": "^2.0.1",
-		"electronmon": "^2.0.2"
+		"electron-util": "^0.17.2",
+		"electron-better-ipc": "^2.0.1"
 	}
 }

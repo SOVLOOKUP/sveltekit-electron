@@ -60,12 +60,6 @@ async function createMainWindow() {
 	}
 }
 
-// app.on('activate', () => {
-// 	if (!mainWindow) {
-// 		createMainWindow();
-// 	}
-// });
-
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') app.quit()
 })

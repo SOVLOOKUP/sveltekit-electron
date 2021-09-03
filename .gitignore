@@ -8,6 +8,7 @@ node_modules/
 .svelte/
 *.local
 build/
+app/
 dist/
 .svelte-kit/
 .pnpm-*
