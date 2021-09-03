@@ -14,7 +14,7 @@
 
 ## Getting Start
 
-You need install [`pnpm`](https://github.com/pnpm/pnpm) first:
+You need to install [`pnpm`](https://github.com/pnpm/pnpm) first:
 
 `npm install pnpm -g`
 
