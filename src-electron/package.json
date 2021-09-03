@@ -8,9 +8,11 @@
 		"dev": "cd .. && pnpm dev"
 	},
 	"dependencies": {
+		"electron-better-ipc": "^2.0.1",
 		"electron-dl": "^3.2.1",
+		"electron-log": "^4.4.1",
 		"electron-serve": "^1.1.0",
-		"electron-util": "^0.17.2",
-		"electron-better-ipc": "^2.0.1"
+		"electron-updater": "^4.3.9",
+		"electron-util": "^0.17.2"
 	}
 }

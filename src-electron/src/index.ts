@@ -1,12 +1,15 @@
 import { app, BrowserWindow, BrowserWindowConstructorOptions } from 'electron'
 import serve from 'electron-serve'
+import { autoUpdater } from 'electron-updater'
+import log from 'electron-log'
 
+// log setting
+log.transports.file.level = 'debug'
+autoUpdater.logger = log
+// in dev mode
 const dev = !app.isPackaged
-
+// base app
 const baseURL = serve({ directory: '../base' })
-const port = process.env.PORT || 3000
-
-let mainWindow: BrowserWindow | null
 
 const baseWindowOptions: BrowserWindowConstructorOptions = {
 	backgroundColor: 'whitesmoke',
@@ -46,15 +49,11 @@ async function loadVite(window: BrowserWindow, port: string) {
 }
 
 async function createMainWindow() {
-	mainWindow = createWindow()
-
-	mainWindow.once('close', () => {
-		mainWindow = null
-	})
+	let mainWindow = createWindow()
 
 	if (dev) {
 		mainWindow.webContents.openDevTools({ mode: 'detach' })
-		await loadVite(mainWindow, port.toString())
+		await loadVite(mainWindow, process.env.PORT || '3000')
 	} else {
 		await baseURL(mainWindow)
 	}
@@ -66,6 +65,9 @@ app.on('window-all-closed', () => {
 ;(async () => {
 	// sandbox mode
 	app.enableSandbox()
+
+	// detect update
+	autoUpdater.checkForUpdatesAndNotify()
 
 	await app.whenReady()
 	await createMainWindow()
