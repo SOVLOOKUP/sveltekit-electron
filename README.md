@@ -5,11 +5,12 @@
 # Sveltekit-Electron
 
 1. Double package.json, no devDependencies bundled
-2. Auto code lint and format
-3. Auto changelog
-4. Auto git manage
-5. Auto github action release
-6. TypeScript + ES6
+2. Auto github action release
+3. Auto update use `electron-updater`
+4. Auto code lint and format use `prettier`
+5. Auto changelog use `gitmoji-changelog`
+6. Auto git manage use `gitmoji` and `release-it`
+7. TypeScript + ES6 use `tsup`
 
 ## Getting Start
 
