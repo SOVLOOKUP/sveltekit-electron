@@ -10,7 +10,7 @@
 4. Auto code lint and format use `prettier`
 5. Auto changelog use `gitmoji-changelog`
 6. Auto git manage use `gitmoji` and `release-it`
-7. TypeScript + ES6 use `tsup`
+7. TypeScript support use `tsup`
 
 ## Getting Start
 
