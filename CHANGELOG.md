@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="1.2.1"></a>
+## 1.2.1 (2021-09-16)
+
+### Changed
+
+- 🎨 format [[6bde3b0](https://github.com/SOVLOOKUP/sveltekit-electron/commit/6bde3b07af2899474861f1931e0649b2fd2100de)]
+
+### Miscellaneous
+
+-  use yarn [[9f72ea6](https://github.com/SOVLOOKUP/sveltekit-electron/commit/9f72ea648edf7ecbf6c355ecbb7bf77388b70273)]
+- 🔨 use bob-ts to build [[2e53d3b](https://github.com/SOVLOOKUP/sveltekit-electron/commit/2e53d3bc9ef0947abe7799947eee7482fc9c4c15)]
+-  Update .npmrc [[3b2126d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/3b2126dc97cd4ea7582074e2c239bd44dfa0f8b3)]
+-  Update README.md [[c95cced](https://github.com/SOVLOOKUP/sveltekit-electron/commit/c95cced11097da5857f565743c6abca14ed5a550)]
+    *  Update README.md ([113c60d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/113c60d14b39fcad293db5d7cdc679387a2af133))
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2021-09-03)
 
