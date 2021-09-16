@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="1.2.8"></a>
+## 1.2.8 (2021-09-16)
+
+### Fixed
+
+- 💚 fix ci [[37760c6](https://github.com/SOVLOOKUP/sveltekit-electron/commit/37760c659866f7d87e26b15f22cfb38495fd8d80)]
+    * 💚 fix ci ([9ca4cbe](https://github.com/SOVLOOKUP/sveltekit-electron/commit/9ca4cbee917f4832e89cc00acd2c449c227e5ca5))
+
+
 <a name="1.2.7"></a>
 ## 1.2.7 (2021-09-16)
 
