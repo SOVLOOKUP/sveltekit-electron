@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.2.5"></a>
+## 1.2.5 (2021-09-16)
+
+### Fixed
+
+- 🐛 fix ci yarnlock [[058afed](https://github.com/SOVLOOKUP/sveltekit-electron/commit/058afed2bf39feebac4d169e42a25c96e2fc56d3)]
+
+
 <a name="1.2.4"></a>
 ## 1.2.4 (2021-09-16)
 
