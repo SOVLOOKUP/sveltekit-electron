@@ -14,19 +14,19 @@
 
 ## Getting Start
 
-You need to install [`pnpm`](https://github.com/pnpm/pnpm) first:
+You need to install [`yarn`](https://github.com/yarnpkg/yarn) first:
 
-`npm install pnpm -g`
+`npm install yarn -g`
 
-| Action           | Command                                      |
-| ---------------- | -------------------------------------------- |
-| Clone            | · `pnpx degit SOVLOOKUP/sveltekit-electron ` |
-| Install          | · `pnpm bootstrap`                           |
-| Develop          | · `pnpm dev`                                 |
-| Build            | · `pnpm build`                               |
-| Commit + Release | · `pnpm ok`                                  |
-| Commit           | · `pnpm commit`                              |
-| Release          | · `pnpm release` or `pnpm prerelease`        |
+| Action           | Command                                     |
+| ---------------- | ------------------------------------------- |
+| Clone            | · `npx degit SOVLOOKUP/sveltekit-electron ` |
+| Install          | · `yarn bootstrap`                          |
+| Develop          | · `yarn dev`                                |
+| Build            | · `yarn build`                              |
+| Commit + Release | · `yarn ok`                                 |
+| Commit           | · `yarn commit`                             |
+| Release          | · `yarn release` or `yarn prerelease`       |
 
 ## Auto Release
 

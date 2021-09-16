@@ -5,7 +5,7 @@
 	"author": "sovlookup",
 	"main": "src/index.cjs",
 	"scripts": {
-		"dev": "cd .. && pnpm dev"
+		"dev": "cd .. && yarn dev"
 	},
 	"dependencies": {
 		"electron-better-ipc": "^2.0.1",

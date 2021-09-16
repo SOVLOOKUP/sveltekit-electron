@@ -7,23 +7,23 @@
 	"main": "app/src/index.cjs",
 	"type": "module",
 	"scripts": {
-		"bootstrap": "pnpm i -r",
+		"bootstrap": "yarn install && cd src-electron && yarn install",
 		"release": "release-it",
 		"prerelease": "release-it --preRelease",
-		"commit": "git add . && pnpx gitmoji -c",
-		"ok": "pnpm commit && pnpm release",
-		"dev": "cross-env NODE_ENV=production pnpm build-electron && pnpm dev:all",
-		"dev:all": "concurrently -n=bobuild,svelte,electron -c=yellow,'#ff3e00',blue \"pnpm build-electron-dev\" \"pnpm dev:svelte\" \"pnpm dev:electron\"",
+		"commit": "git add . && npx gitmoji -c",
+		"ok": "yarn commit && yarn release",
+		"dev": "cross-env NODE_ENV=production yarn build-electron && yarn dev:all",
+		"dev:all": "concurrently -n=bobuild,svelte,electron -c=yellow,'#ff3e00',blue \"yarn build-electron-dev\" \"yarn dev:svelte\" \"yarn dev:electron\"",
 		"build-electron": "node scripts/prebuild-electron.js && bob-ts -i src-electron -d app/src -f cjs",
 		"build-electron-dev": "bob-ts-watch -i src-electron -d app/src -f cjs",
 		"dev:svelte": "svelte-kit dev",
-		"dev:electron": "pnpx electronmon .",
-		"build": "cross-env NODE_ENV=production pnpm build-electron && pnpm build:svelte && pnpm build:electron",
+		"dev:electron": "npx electronmon .",
+		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte && yarn build:electron",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "pnpx electron-builder --config build.config.json  --publish always -c.snap.publish=github",
-		"lint": "pnpx svelte-check --tsconfig ./tsconfig.json",
-		"format": "pnpx prettier --write --plugin-search-dir=. .",
-		"changelog": "pnpx gitmoji-changelog --group-similar-commits"
+		"build:electron": "npx electron-builder --config build.config.json  --publish always -c.snap.publish=github",
+		"lint": "npx svelte-check --tsconfig ./tsconfig.json",
+		"format": "npx prettier --write --plugin-search-dir=. .",
+		"changelog": "npx gitmoji-changelog --group-similar-commits"
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
@@ -70,9 +70,9 @@
 			}
 		},
 		"hooks": {
-			"before:init": "pnpm lint",
-			"after:bump": "pnpm changelog",
-			"before:git:release": "pnpm format",
+			"before:init": "yarn lint",
+			"after:bump": "yarn changelog",
+			"before:git:release": "yarn format",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
 	},
