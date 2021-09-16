@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.2.7"></a>
+## 1.2.7 (2021-09-16)
+
+### Fixed
+
+- 💚 fix snap [[a1b5e9b](https://github.com/SOVLOOKUP/sveltekit-electron/commit/a1b5e9b58901ff77a888766059e2f5437bf0db57)]
+
+
 <a name="1.2.6"></a>
 ## 1.2.6 (2021-09-16)
 
