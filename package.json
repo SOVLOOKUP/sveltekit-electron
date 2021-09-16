@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "1.2.1",
+	"version": "1.2.2-0",
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
@@ -9,7 +9,7 @@
 	"scripts": {
 		"bootstrap": "yarn install && cd src-electron && yarn install",
 		"release": "release-it",
-		"prerelease": "release-it --preRelease",
+		"pre-release": "release-it --preRelease",
 		"commit": "git add . && npx gitmoji -c",
 		"ok": "yarn commit && yarn release",
 		"dev": "cross-env NODE_ENV=production yarn build-electron && yarn dev:all",
