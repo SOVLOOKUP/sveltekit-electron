@@ -18,9 +18,9 @@
 		"build-electron-dev": "bob-ts-watch -i src-electron -d app/src -f cjs",
 		"dev:svelte": "svelte-kit dev",
 		"dev:electron": "npx electronmon .",
-		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte && yarn build:electron",
+		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte",
 		"build:svelte": "svelte-kit build",
-		"build:electron": "npx electron-builder --config build.config.json  --publish always -c.snap.publish=github",
+		"dist": "npx electron-builder --config build.config.json",
 		"lint": "npx svelte-check --tsconfig ./tsconfig.json",
 		"format": "npx prettier --write --plugin-search-dir=. .",
 		"changelog": "npx gitmoji-changelog --group-similar-commits"

@@ -24,6 +24,7 @@ You need to install [`yarn`](https://github.com/yarnpkg/yarn) first:
 | Install          | · `yarn bootstrap`                          |
 | Develop          | · `yarn dev`                                |
 | Build            | · `yarn build`                              |
+| Dist             | · `yarn dist`                               |
 | Commit + Release | · `yarn ok`                                 |
 | Commit           | · `yarn commit`                             |
 | Release          | · `yarn release` or `yarn prerelease`       |
