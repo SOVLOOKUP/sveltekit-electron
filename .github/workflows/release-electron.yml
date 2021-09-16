@@ -42,16 +42,16 @@ jobs:
             - uses: borales/actions-yarn@v2.3.0
               with:
                   cmd: build
-            
+
             - name: Electron Builder Action
               uses: samuelmeuli/action-electron-builder@v1.6.0
-                with:
-                github_token: ${{ secrets.github_token }}
-                release: true
-                args: |
-                   -p always
-                   -c.snap.publish=github
-                   --config build.config.json
+              with:
+              github_token: ${{ secrets.github_token }}
+              release: true
+              args: |
+                  -p always
+                  -c.snap.publish=github
+                  --config build.config.json
 
     else:
         runs-on: ${{ matrix.os }}
@@ -82,10 +82,10 @@ jobs:
 
             - name: Electron Builder Action
               uses: samuelmeuli/action-electron-builder@v1.6.0
-                with:
-                github_token: ${{ secrets.github_token }}
-                release: true
-                args: |
-                   -p always
-                   -c.snap.publish=github
-                   --config build.config.json
+              with:
+              github_token: ${{ secrets.github_token }}
+              release: true
+              args: |
+                  -p always
+                  -c.snap.publish=github
+                  --config build.config.json
