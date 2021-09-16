@@ -70,9 +70,8 @@
 			}
 		},
 		"hooks": {
-			"before:init": "yarn lint",
+			"before:init": "yarn lint && yarn format",
 			"after:bump": "yarn changelog",
-			"before:git:release": "yarn format",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
 	},
