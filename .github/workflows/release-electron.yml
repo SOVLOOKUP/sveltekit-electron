@@ -51,7 +51,7 @@ jobs:
                   release: true
                   args: |
                       -p always
-                      -c.snap.publish=github
+                      -c.snap.publish github
                       --config build.config.json
 
     else:
