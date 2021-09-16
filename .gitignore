@@ -12,3 +12,4 @@ app/
 dist/
 .svelte-kit/
 .pnpm-*
+**/yarn.lock
