@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="1.2.2"></a>
+## 1.2.2 (2021-09-16)
+
+### Fixed
+
+- 🐛 fix prerelease bug [[f37e460](https://github.com/SOVLOOKUP/sveltekit-electron/commit/f37e460632bf1a147da6740b76f6ff7a4ce9168e)]
+- 💚 fix format bug [[a86483d](https://github.com/SOVLOOKUP/sveltekit-electron/commit/a86483d383dd60bb9ea29ee3fde22c2a12529567)]
+
+
 <a name="1.2.1"></a>
 ## 1.2.1 (2021-09-16)
 
