@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.2.6"></a>
+## 1.2.6 (2021-09-16)
+
+### Fixed
+
+- 💚 fix build [[b8c6b33](https://github.com/SOVLOOKUP/sveltekit-electron/commit/b8c6b3344154e5cbb4656402e085b6982d325744)]
+
+
 <a name="1.2.5"></a>
 ## 1.2.5 (2021-09-16)
 
