@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="1.2.3"></a>
+## 1.2.3 (2021-09-16)
+
+### Fixed
+
+- 🐛 fix ci format [[f872906](https://github.com/SOVLOOKUP/sveltekit-electron/commit/f8729067c4eeeb3e1d7e63a962b17632c106c0eb)]
+- 💚 fix electron build [[a5d2497](https://github.com/SOVLOOKUP/sveltekit-electron/commit/a5d2497b7f57f55dfba36e7b0de3059ec4476d88)]
+
+
 <a name="1.2.2"></a>
 ## 1.2.2 (2021-09-16)
 
