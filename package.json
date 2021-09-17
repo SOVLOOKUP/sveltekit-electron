@@ -7,14 +7,14 @@
 	"main": "app/src/index.cjs",
 	"type": "module",
 	"scripts": {
-		"bootstrap": "yarn install && cd src-electron && yarn install",
+		"bootstrap": "npx zx scripts/bootstrap.js",
 		"release": "release-it",
 		"pre-release": "release-it --preRelease",
 		"commit": "git add . && npx gitmoji -c",
 		"ok": "yarn commit && yarn release",
 		"dev": "cross-env NODE_ENV=production yarn build-electron && yarn dev:all",
 		"dev:all": "concurrently -n=bobuild,svelte,electron -c=yellow,'#ff3e00',blue \"yarn build-electron-dev\" \"yarn dev:svelte\" \"yarn dev:electron\"",
-		"build-electron": "node scripts/prebuild-electron.js && bob-ts -i src-electron -d app/src -f cjs",
+		"build-electron": "zx scripts/prebuild-electron.js && bob-ts -i src-electron -d app/src -f cjs",
 		"build-electron-dev": "bob-ts-watch -i src-electron -d app/src -f cjs",
 		"dev:svelte": "svelte-kit dev",
 		"dev:electron": "npx electronmon .",
@@ -57,7 +57,8 @@
 		"svelte-preprocess": "^4.9.4",
 		"tslib": "^2.3.1",
 		"typescript": "^4.4.3",
-		"vite": "^2.5.7"
+		"vite": "^2.5.7",
+		"zx": "^4.2.0"
 	},
 	"release-it": {
 		"npm": {
