@@ -35,21 +35,14 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-
 
-            - name: Prepare Linux
-              if: matrix.os == 'ubuntu-latest'
-              run: ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
-
             - uses: borales/actions-yarn@v2.3.0
-              with:
-                  cmd: bootstrap
+            - run: yarn boot
 
-            - uses: borales/actions-yarn@v2.3.0
-              with:
-                  cmd: build
+            - if: matrix.os == 'ubuntu-latest'
+              run: chmod +x node_modules/7zip-bin-linux/x64/7za
 
-            - uses: borales/actions-yarn@v2.3.0
-              with:
-                  cmd: package
+            - run: yarn build
+            - run: yarn package
               env:
                   github_token: ${{ secrets.github_token }}
                   USE_SYSTEM_FPM: true
