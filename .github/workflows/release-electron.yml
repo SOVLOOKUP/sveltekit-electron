@@ -44,6 +44,4 @@ jobs:
             - run: yarn build
             - run: yarn package
               env:
-                  github_token: ${{ secrets.github_token }}
                   GH_TOKEN: ${{ secrets.github_token }}
-                  USE_SYSTEM_FPM: true
