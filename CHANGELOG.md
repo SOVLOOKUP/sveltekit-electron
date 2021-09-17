@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.2.15"></a>
+## 1.2.15 (2021-09-17)
+
+### Fixed
+
+- 💚 fix 7zip [[9428c76](https://github.com/SOVLOOKUP/sveltekit-electron/commit/9428c768def856e832636d8f3e09ce4a776c2e89)]
+
+
 <a name="1.2.14"></a>
 ## 1.2.14 (2021-09-17)
 
