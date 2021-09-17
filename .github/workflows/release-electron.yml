@@ -48,3 +48,4 @@ jobs:
                   cmd: package
               env:
                   github_token: ${{ secrets.github_token }}
+                  USE_SYSTEM_FPM: true
