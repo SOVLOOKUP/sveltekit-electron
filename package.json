@@ -17,7 +17,7 @@
 		"dev:svelte": "svelte-kit dev",
 		"dev:electron": "npx electronmon .",
 		"build-electron": "zx scripts/prebuild-electron.js && bob-ts -i src-electron -d app/src -f cjs",
-		"build-electron-dev": "bob-ts-watch -i src-electron -d src-electron/build -f cjs",
+		"build-electron-dev": "bob-ts-watch -i src-electron -d app/src -f cjs",
 		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte",
 		"build:svelte": "svelte-kit build",
 		"package": "npx electron-builder --config build.config.json -p always -c.snap.publish=github",
