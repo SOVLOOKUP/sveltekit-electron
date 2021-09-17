@@ -1,7 +1,7 @@
 # Changelog
 
-<a name="1.2.17"></a>
-## 1.2.17 (2021-09-17)
+<a name="1.2.18"></a>
+## 1.2.18 (2021-09-17)
 
 ### Added
 
@@ -9,11 +9,13 @@
 
 ### Changed
 
+- 🎨 ok [[72e8fba](https://github.com/SOVLOOKUP/sveltekit-electron/commit/72e8fbab83eebbf1f0d436373c722f591648a3cf)]
 - 🚨 fix dev denpendencies bug [[6ebdf19](https://github.com/SOVLOOKUP/sveltekit-electron/commit/6ebdf19f25dafe79af454952aa077e2f54e82bdd)]
 
 ### Miscellaneous
 
--  Release 1.2.16 [[5d72f19](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5d72f192c5619f5650d278d9afb14e97fa439b8b)]
+-  Release 1.2.17 [[1845351](https://github.com/SOVLOOKUP/sveltekit-electron/commit/184535165da1a4d274e8895e231990d3742e1df0)]
+    *  Release 1.2.16 ([5d72f19](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5d72f192c5619f5650d278d9afb14e97fa439b8b))
 -  Update release-electron.yml [[40b6f7f](https://github.com/SOVLOOKUP/sveltekit-electron/commit/40b6f7f7e3ff44e11811d37e791f1fe1c290f3e2)]
 
 

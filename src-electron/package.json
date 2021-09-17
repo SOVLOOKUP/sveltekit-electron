@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-electron",
-	"version": "1.2.17",
+	"version": "1.2.18",
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
 	"main": "src/index.cjs",
