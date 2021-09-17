@@ -1,7 +1,11 @@
 # Changelog
 
-<a name="1.2.16"></a>
-## 1.2.16 (2021-09-17)
+<a name="1.2.17"></a>
+## 1.2.17 (2021-09-17)
+
+### Added
+
+- 👷‍♂️ update build script [[6cd60b2](https://github.com/SOVLOOKUP/sveltekit-electron/commit/6cd60b21cca7a726cb07a88d1b7dd20c8044269f)]
 
 ### Changed
 
@@ -9,6 +13,7 @@
 
 ### Miscellaneous
 
+-  Release 1.2.16 [[5d72f19](https://github.com/SOVLOOKUP/sveltekit-electron/commit/5d72f192c5619f5650d278d9afb14e97fa439b8b)]
 -  Update release-electron.yml [[40b6f7f](https://github.com/SOVLOOKUP/sveltekit-electron/commit/40b6f7f7e3ff44e11811d37e791f1fe1c290f3e2)]
 
 
