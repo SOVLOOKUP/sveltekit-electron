@@ -36,13 +36,14 @@ jobs:
                       ${{ runner.os }}-
 
             - run: npm install -g yarn
-            - run: yarn boot
 
+            - run: yarn boot
             - if: matrix.os == 'ubuntu-latest'
-              run: chmod +x node_modules/7zip-bin-linux/x64/7za
+              run: yarn add 7zip-bin-linux
 
             - run: yarn build
             - run: yarn package
               env:
                   github_token: ${{ secrets.github_token }}
+                  GH_TOKEN: ${{ secrets.github_token }}
                   USE_SYSTEM_FPM: true
