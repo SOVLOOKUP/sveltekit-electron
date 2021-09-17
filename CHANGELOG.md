@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.2.10"></a>
+## 1.2.10 (2021-09-17)
+
+### Fixed
+
+- 💚 fix env bug [[c901e7e](https://github.com/SOVLOOKUP/sveltekit-electron/commit/c901e7e82d284d1cfa21113bed3507f646395ec6)]
+
+
 <a name="1.2.9"></a>
 ## 1.2.9 (2021-09-17)
 
