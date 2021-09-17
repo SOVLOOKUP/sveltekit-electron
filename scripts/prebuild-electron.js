@@ -15,4 +15,3 @@ if (fs.existsSync('.git')) {
 } else {
 	console.warn('Please use git init before release!')
 }
-
