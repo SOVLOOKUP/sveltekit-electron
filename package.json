@@ -20,7 +20,7 @@
 		"dev:electron": "npx electronmon .",
 		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte",
 		"build:svelte": "svelte-kit build",
-		"dist": "npx electron-builder --config build.config.json",
+		"package": "npx electron-builder --config build.config.json -p always -c.snap.publish=github",
 		"lint": "npx svelte-check --tsconfig ./tsconfig.json",
 		"format": "npx prettier --write --plugin-search-dir=. .",
 		"changelog": "npx gitmoji-changelog --group-similar-commits"
