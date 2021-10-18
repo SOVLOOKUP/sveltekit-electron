@@ -21,7 +21,7 @@ You need to install [`yarn`](https://github.com/yarnpkg/yarn) first:
 | Action           | Command                                     |
 | ---------------- | ------------------------------------------- |
 | Clone            | · `npx degit SOVLOOKUP/sveltekit-electron ` |
-| Install          | · `yarn boot`                               |
+| Install          | · `yarn install`                               |
 | Develop          | · `yarn dev`                                |
 | Build            | · `yarn build`                              |
 | Package          | · `yarn package`                            |

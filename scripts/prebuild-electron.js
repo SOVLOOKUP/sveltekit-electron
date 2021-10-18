@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
 import { fs } from 'zx'
 
+import dotenv from 'dotenv'
 dotenv.config()
 const electronDirName = process.env.ELECTRON_DIR_NAME
 const outputDir = process.env.OUTPUT_DIR

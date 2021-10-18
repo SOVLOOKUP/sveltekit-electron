@@ -4,29 +4,30 @@
 	"private": true,
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
-	"main": "app/src/index.cjs",
+	"main": "src-electron/dist/index.cjs",
 	"type": "module",
 	"scripts": {
-		"boot": "npx zx scripts/boot.js",
+		"prepare": "npx zx scripts/boot.js",
 		"release": "release-it",
 		"pre-release": "release-it --preRelease",
 		"commit": "git add . && npx gitmoji -c",
 		"ok": "yarn commit && yarn release",
-		"dev": "yarn build && yarn dev:all",
-		"dev:all": "concurrently -n=bobuild,svelte,electron -c=yellow,'#ff3e00',blue \"yarn build-electron-dev\" \"yarn dev:svelte\" \"yarn dev:electron\"",
+		"dev": "yarn dev:all",
+		"dev:all": "concurrently -n=electron,svelte,server -c=yellow,'#ff3e00',blue \"yarn build-electron-dev\" \"yarn dev:svelte\" \"yarn dev:electron\"",
 		"dev:svelte": "svelte-kit dev",
 		"dev:electron": "npx electronmon .",
-		"build-electron": "zx scripts/prebuild-electron.js && bob-ts -i src-electron -d app/src -f cjs",
-		"build-electron-dev": "bob-ts-watch -i src-electron -d app/src -f cjs",
+		"build-electron": "bob-ts -i src-electron/src -d src-electron/dist -f cjs",
+		"build-electron-dev": "bob-ts-watch -i src-electron/src -d src-electron/dist -f cjs",
 		"build": "cross-env NODE_ENV=production yarn build-electron && yarn build:svelte",
 		"build:svelte": "svelte-kit build",
-		"package": "npx electron-builder --config build.config.json -p always -c.snap.publish=github",
+		"package": "node_modules/.bin/electron-builder --config build.config.json -p always -c.snap.publish=github",
 		"lint": "npx svelte-check --tsconfig ./tsconfig.json",
 		"format": "npx prettier --write --plugin-search-dir=. .",
 		"changelog": "npx gitmoji-changelog --group-similar-commits"
 	},
 	"devDependencies": {
 		"@release-it/bumper": "^3.0.1",
+		"electron": "^15.2.0",
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
 		"@sveltejs/kit": "next",
 		"@types/node": "^16.10.1",
@@ -37,7 +38,6 @@
 		"cross-env": "^7.0.3",
 		"diff-match-patch": "^1.0.5",
 		"dotenv": "^10.0.0",
-		"electron": "^15.0.0",
 		"electron-builder": "^22.11.7",
 		"electronmon": "^2.0.2",
 		"eslint": "^7.32.0",
@@ -72,11 +72,5 @@
 			"before:init": "yarn lint && yarn format",
 			"after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
 		}
-	},
-	"electronmon": {
-		"patterns": [
-			"!src/**/*",
-			"!src-electron/**/*"
-		]
 	}
 }

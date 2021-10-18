@@ -3,9 +3,17 @@
 	"version": "1.3.0",
 	"description": "Minimal Sveltekit + Electron starter template.",
 	"author": "sovlookup",
-	"main": "src/index.cjs",
 	"scripts": {
-		"dev": "cd .. && yarn dev"
+		"build": "cd .. && npm run build",
+		"dev": "cd .. && npm run dev"
+	},
+	"targets": {
+		"default": {
+			"includeNodeModules": false
+		}
+	},
+	"engines": {
+		"node": "16"
 	},
 	"dependencies": {
 		"electron-better-ipc": "^2.0.1",
@@ -14,5 +22,8 @@
 		"electron-serve": "^1.1.0",
 		"electron-updater": "^4.3.9",
 		"electron-util": "^0.17.2"
+	},
+	"devDependencies": {
+		"electron": "^15.2.0"
 	}
 }

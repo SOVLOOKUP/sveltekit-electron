@@ -1,9 +1,9 @@
 .svelte-kit/**
 static/**
 build/**
-app/**
 node_modules/**
 dist/**
 pnpm-lock.yaml
 CHANGELOG.md
 .vscode/**/*
+.parcel-cache

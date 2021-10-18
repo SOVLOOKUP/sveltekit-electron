@@ -9,7 +9,7 @@ autoUpdater.logger = log
 // in dev mode
 const dev = !app.isPackaged
 // base app
-const baseURL = serve({ directory: '../base' })
+const baseURL = serve({ directory: 'app' })
 
 const baseWindowOptions: BrowserWindowConstructorOptions = {
 	backgroundColor: 'whitesmoke',

@@ -4,9 +4,5 @@
 	"copyright": "Copyright (c) 2021 SOVLOOKUP",
 	"directories": {
 		"output": "dist"
-	},
-	"extraResources": {
-		"from": "build",
-		"to": "base"
 	}
 }
